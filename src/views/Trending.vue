@@ -1,36 +1,13 @@
 <template>
-  <div class="home">
-    <!-- Banner -->
-    <div class="primary banner">
-      <div class="banner__content container">
-        <!-- <div class="bottom">
-          <v-btn color="#EDEBF0" text style="background-color: #EDEBF0;" class="mr-2">
-            <v-icon>mdi-arrow-left</v-icon>
-          </v-btn>
-          <v-btn color="#EDEBF0" text style="background-color: #EDEBF0;">
-            <v-icon>mdi-arrow-left</v-icon>
-          </v-btn>
-        </div> -->
-      </div>
-    </div>
-    <div style="background: rgb(237 235 240 / 40%)" class="py-6 py-sm-8 py-md-10 py-lg-12">
-      <div class="container">
-        <!-- Products -->
-        <div class="mb-3 d-flex align-center justify-space-between">
-          <div class="text-h4">Our Products</div>
-          <v-btn color="primary" rounded outlined class="elevation-0 px-5">
-            <span style="text-transform: capitalize; font-size: 13px !important;">more</span>
-            <v-icon size="18" right>mdi-arrow-right</v-icon>
-          </v-btn>
-        </div>
-        <div class="products">
-          <div class="product" v-for="(p, i) in products" :key="i">
-            <div class="product__img">
-              <img :src="p">
-            </div>
+  <div class="products__div" style="background: rgb(237 235 240 / 40%)">
+    <div class="container">
+      <div class="products">
+        <div class="product" v-for="(p, i) in products" :key="i">
+          <div class="product__img">
+            <img :src="p">
           </div>
         </div>
-      </div>  
+      </div>
     </div>  
   </div>
 </template>
@@ -38,14 +15,6 @@
 <script>
 export default {
   data: () => ({
-    category: [
-      { icon: 'https://image.flaticon.com/icons/png/512/3199/3199914.png', name: 'All' },
-      { icon: 'https://image.flaticon.com/icons/png/512/3534/3534312.png', name: 'Dress' },
-      { icon: 'https://image.flaticon.com/icons/png/512/3199/3199914.png', name: 'Shoes' },
-      { icon: 'https://image.flaticon.com/icons/png/512/3534/3534312.png', name: 'Jeans' },
-      { icon: 'https://image.flaticon.com/icons/png/512/3199/3199914.png', name: 'Jackets' },
-      { icon: 'https://image.flaticon.com/icons/png/512/3534/3534312.png', name: 'Sweaters' }
-    ],
     products: [
       'https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/productimage/2020/9/16/25f5b6a7-ce25-4e66-8a61-3aa2037b6c741600207614629-1.jpg',
       'https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/8076725/2018/12/7/943ed6af-c315-4119-8d0a-ac89311d55661544170431419-AKS-Women-Dresses-7841544170430220-1.jpg',
@@ -62,22 +31,3 @@ export default {
   })
 }
 </script>
-
-<style scoped>
-.banner {
-  height: 80vh;
-}
-.banner__content {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-/* Category */
-.category {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15%, 1fr));
-  grid-gap: 12px;
-}
-</style>
