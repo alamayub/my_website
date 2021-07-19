@@ -13,8 +13,16 @@
         </div> -->
       </div>
     </div>
-    <div style="background: rgb(237 235 240 / 40%)" class="py-6 py-sm-8 py-md-10 py-lg-12">
+    <div class="py-6 py-sm-8 py-md-10 py-lg-12">
       <div class="container">
+        <!-- Category -->
+        <div class="text-h4 text-center">Our Exclusive Collection</div>
+        <div class="exclusive__collection my-5">
+          <div v-for="(c, i) in category" :key="i">
+            <img :src="c.img" :alt="c.name">
+          </div>
+        </div>
+
         <!-- Products -->
         <div class="mb-3 d-flex align-center justify-space-between">
           <div class="text-h4">Our Products</div>
@@ -39,12 +47,10 @@
 export default {
   data: () => ({
     category: [
-      { icon: 'https://image.flaticon.com/icons/png/512/3199/3199914.png', name: 'All' },
-      { icon: 'https://image.flaticon.com/icons/png/512/3534/3534312.png', name: 'Dress' },
-      { icon: 'https://image.flaticon.com/icons/png/512/3199/3199914.png', name: 'Shoes' },
-      { icon: 'https://image.flaticon.com/icons/png/512/3534/3534312.png', name: 'Jeans' },
-      { icon: 'https://image.flaticon.com/icons/png/512/3199/3199914.png', name: 'Jackets' },
-      { icon: 'https://image.flaticon.com/icons/png/512/3534/3534312.png', name: 'Sweaters' }
+      { name: 'dress', img: 'https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/13719154/2021/3/5/3fda7627-9073-4702-a66e-f32f10bc64021614925061807-Athena-Fuchsia-Pink-dress-with-Balloon-puff-sleeves-81614925-1.jpg' },
+      { name: 'glasses', img: 'https://pakistanipretwear.com/wp-content/uploads/2020/11/2-2.png' },
+      { name: 'shoes', img: 'https://ae01.alicdn.com/kf/H31f1836ce9cf451d87ff8bc21a5474d1b/Sports-Running-Shoes-Kids-Girls-Sneakers-Teenager-Trainers-Breathable-Casual-Outdoor-Tennis-Shoes-Girl-Black-Pink.jpg' },
+      { name: 'bags', img: 'https://ae01.alicdn.com/kf/HTB1HwD.K5LaK1RjSZFxq6ymPFXaW/Fashion-Backpack-Women-Leisure-Backpack-Girls-School-Bags-Casual-Canvas-Student-Backpack-Teenage-Girls-Children-Bags.jpg_640x640.jpg' }
     ],
     products: [
       'https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/productimage/2020/9/16/25f5b6a7-ce25-4e66-8a61-3aa2037b6c741600207614629-1.jpg',
@@ -64,9 +70,7 @@ export default {
 </script>
 
 <style scoped>
-.banner {
-  height: 80vh;
-}
+.banner { height: 80vh; }
 .banner__content {
   height: 100%;
   display: flex;
@@ -79,5 +83,16 @@ export default {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15%, 1fr));
   grid-gap: 12px;
+}
+
+.exclusive__collection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(49%, 1fr));
+}
+.exclusive__collection img {
+  height: 100%;
+  width: 100%;
+  display: block;
+  object-fit: cover;
 }
 </style>

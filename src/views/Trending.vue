@@ -1,5 +1,5 @@
 <template>
-  <div class="products__div" style="background: rgb(237 235 240 / 40%)">
+  <div class="products__div">
     <div class="container">
       <div class="products">
         <div class="product" v-for="(p, i) in products" :key="i">

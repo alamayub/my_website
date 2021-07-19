@@ -1,19 +1,21 @@
 <template>
   <v-app>
-    <login />
-    <navbar />
+    <Login />
+    <Navbar />
     <v-main>
       <router-view/>
     </v-main>
+    <Footer />
   </v-app>
 </template>
 
 <script>
+import Footer from './components/Footer.vue';
 import Login from './components/Login.vue';
 import Navbar from './components/Navbar.vue';
 
 export default {
-  components: { Navbar, Login },
+  components: { Navbar, Login, Footer },
   name: 'App',
 
   data: () => ({
@@ -28,6 +30,7 @@ html { scroll-behavior: smooth; }
 body {
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
+  /* background: rgb(237 235 240 / 40%); */
 }
 * { text-decoration: none; }
 .container {
@@ -40,7 +43,7 @@ body {
 /* Products */
 .products {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(23%, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(18%, 1fr));
   grid-gap: 16px;
 }
 .product {
@@ -53,20 +56,16 @@ body {
   width: 100%;
   object-fit: cover;
 }
-.v-btn:not(.v-btn--round).v-size--default {
-  height: 30px !important;
-  min-width: 64px;
-}
-@media (max-width: 900px) {
+@media (max-width: 960px) {
   .products {
-    grid-template-columns: repeat(auto-fit, minmax(31%, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(23%, 1fr));
     grid-gap: 12px;
   }
+}
+@media (max-width: 750px) {
+  .products { grid-template-columns: repeat(auto-fit, minmax(32%, 1fr)); }
 }
 @media (max-width: 550px) {
-  .products {
-    grid-template-columns: repeat(auto-fit, minmax(48%, 1fr));
-    grid-gap: 12px;
-  }
+  .products { grid-template-columns: repeat(auto-fit, minmax(48%, 1fr)); }
 }
 </style>

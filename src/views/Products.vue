@@ -1,10 +1,17 @@
 <template>
-  <div class="products__div" style="background: rgb(237 235 240 / 40%)">
+  <div class="products__div">
     <div class="container">
       <div class="products">
         <div class="product" v-for="(p, i) in products" :key="i">
           <div class="product__img">
             <img :src="p">
+          </div>
+          <div class="product__desc pa-3">
+            <div class="product__type text-uppercase font-weight-bold">dress</div>
+            <div class="product__title text-capitalize">Kurti dress for multiple ocation</div>
+            <div class="product__price">
+              <span>Rs.999</span>&nbsp;<i>Rs.1250</i>&nbsp;<span class="amber--text"><i>(25% off)</i></span>
+            </div>
           </div>
         </div>
       </div>
@@ -16,18 +23,47 @@
 export default {
   data: () => ({
     products: [
-      'https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/productimage/2020/9/16/25f5b6a7-ce25-4e66-8a61-3aa2037b6c741600207614629-1.jpg',
-      'https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/8076725/2018/12/7/943ed6af-c315-4119-8d0a-ac89311d55661544170431419-AKS-Women-Dresses-7841544170430220-1.jpg',
-      'https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/13435636/2021/1/22/f6914028-82fa-4187-90a4-1867d8eac3a11611296894583IndoEraGreenEmbroideredkurtaPalazzowithDupattaSetsDressesDee1.jpg',
-      'https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/11364418/2020/1/28/8e31363f-8ac5-4669-9aa8-114d502d7be61580207577109-SASSAFRAS-Women-Maroon-Solid-Tiered-Maxi-Dress-3781580207574-1.jpg',
-      'https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/11364432/2020/1/24/47d6a27d-2e5e-45e9-85ef-a9a5ebf417a11579852235194-SASSAFRAS-Women-Olive-Green-Printed-A-Line-Dress-73115798522-1.jpg',
-      'https://i.pinimg.com/originals/a0/59/23/a05923a8ec8e3967a17f015f5c2d2314.jpg',
-      'https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/12826890/2020/11/20/3a2f3107-1d07-4072-a1a7-5cea432d9d791605865044963-Maaesa-Women-Grey--Orange-Printed-Tiered-A-Line-Dress-344160-1.jpg',
-      'https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/2242503/2018/7/30/00fa54ff-cc59-4d9e-b618-34766946f2c81532942294504-Tokyo-Talkies-Women-Navy-Printed-Shirt-Dress-5291532942294350-1.jpg',
-      'https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/productimage/2021/1/21/d08a474c-6631-4cc2-af75-276b8d18f3e21611231055095-1.jpg',
-      'https://i.pinimg.com/originals/d2/46/56/d2465670fdf25ea043f59f7b6e782430.jpg',
-      'https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/10715888/2019/10/4/2508fa85-67c7-4a65-8189-9ae68bba16cc1570190578307-Inddus-Women-Dresses-491570190576076-1.jpg'      
+      require('../assets/img/img.webp'),
+      require('../assets/img/img0.webp'),
+      require('../assets/img/img1.jpg'),
+      require('../assets/img/img1.webp'),
+      require('../assets/img/img2.webp'),
+      require('../assets/img/img2.jpg'),
+      require('../assets/img/img3.webp'),
+      require('../assets/img/img4.webp'),
+      require('../assets/img/img5.jpg'),
+      require('../assets/img/img6.webp'),
+      require('../assets/img/img6.jpg'),
+      require('../assets/img/img7.jpg')
     ]
   })
 }
 </script>
+
+<style scoped>
+.product__desc {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1;
+}
+.product__title {
+  font-size: 14px;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 6px 0;
+  font-weight: lighter;
+  color: #535766;
+}
+.product__price { 
+  font-size: 12px;
+  font-weight: 100; 
+  color: #535766;
+}
+.product__price span:first-child { 
+  font-size: 14px;
+  font-weight: 600; 
+  color: black !important;
+}
+</style>
