@@ -63,30 +63,3 @@ span {
   font-weight: bold !important;
 }
 </style>
-
-<!--
-
-<div class="container">
-      <div class="d-flex align-center">
-        <v-img alt="Vuetify Logo" class="shrink mr-2" contain src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png" transition="scale-transition" width="40" />
-        <v-img alt="Vuetify Name" class="shrink mt-1 hidden-sm-and-down" contain min-width="100" src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png" width="100" />
-      </div>
-      <div class="d-flex align-center justify-space-between">
-        <div class="logo">
-          <span>SHOP.ME</span>
-        </div>
-        <v-spacer></v-spacer>
-        <div class="links">
-          <v-btn text rounded v-for="(link, i) in links" :key="i" :to="link.to" class="px-5">
-            <span>{{ link.name }}</span>
-          </v-btn>
-        </div>
-        <v-spacer></v-spacer>
-        <div class="log__btn">
-          <v-btn class="white primary--text" rounded width="150" @click="login">
-            <span>login</span>
-          </v-btn>
-        </div>
-      </div>
-    </div>
--->

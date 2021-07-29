@@ -2,14 +2,14 @@
   <div class="products__div">
     <div class="container">
       <div class="products">
-        <div class="product" v-for="(p, i) in products" :key="i">
+        <div class="product" v-for="(p, i) in products" :key="i" data-aos="zoom-in">
           <div class="product__img">
             <img :src="p">
           </div>
           <div class="product__desc pa-3">
-            <div class="product__type text-uppercase font-weight-bold">dress</div>
-            <div class="product__title text-capitalize">Kurti dress for multiple ocation</div>
-            <div class="product__price">
+            <div class="product__type text-uppercase font-weight-bold" data-aos="fade-left">dress</div>
+            <div class="product__title text-capitalize" data-aos="fade-right">Kurti dress for multiple ocation</div>
+            <div class="product__price" data-aos="fade-left">
               <span>Rs.999</span>&nbsp;<i>Rs.1250</i>&nbsp;<span class="amber--text"><i>(25% off)</i></span>
             </div>
           </div>
@@ -41,9 +41,20 @@ export default {
 </script>
 
 <style scoped>
+.product {
+  transition: 250ms;
+  overflow: hidden;
+  cursor: pointer;
+}
+.product:hover {
+  box-shadow: 0 1px 10px 0 rgb(0 0 0 / 20%);
+}
 .product__desc {
   font-family: 'Poppins', sans-serif;
   line-height: 1;
+  border-bottom: .5px solid rgb(0 0 0 / 10%);
+  border-left: .5px solid rgb(0 0 0 / 10%);
+  border-right: .5px solid rgb(0 0 0 / 10%);
 }
 .product__title {
   font-size: 14px;

@@ -7,7 +7,13 @@ import vuetify from './plugins/vuetify'
 
 Vue.config.productionTip = false
 
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
 new Vue({
+  created () {
+    AOS.init()
+  },
   router,
   store,
   vuetify,
