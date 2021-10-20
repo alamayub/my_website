@@ -10,6 +10,9 @@ Vue.config.productionTip = false
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
+import ItemCard from './components/ItemCard'
+Vue.component('ItemCard', ItemCard)
+
 new Vue({
   created () {
     AOS.init()

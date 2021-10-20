@@ -1,21 +1,23 @@
 <template>
   <v-app-bar app color="primary" dark elevate-on-scroll>
-    <div class="logo">
-      <span>SHOP.ME</span>
-    </div>
-    <v-spacer></v-spacer>
-    <div class="links">
-      <v-btn height="30" :icon="screen" text rounded v-for="(link, i) in links" :key="i" :to="link.to" class="px-5">
-        <span v-if="!screen">{{ link.name }}</span>
-        <v-icon small v-if="screen">{{ link.icon }}</v-icon>
-      </v-btn>
-    </div>
-    <v-spacer></v-spacer>
-      <div class="log__btn">
-        <v-btn class="white primary--text" rounded width="150" @click="login">
-        <span>login</span>
-      </v-btn>
-    </div>
+    <v-container class="d-flex justify-space-between align-center pa-0 px-lg-3">
+      <div class="logo">
+        <span>SHOP.ME</span>
+      </div>
+      <v-spacer></v-spacer>
+      <div class="links">
+        <v-btn height="30" :icon="screen" text rounded v-for="(link, i) in links" :key="i" :to="link.to" class="px-5">
+          <span v-if="!screen">{{ link.name }}</span>
+          <v-icon small v-if="screen">{{ link.icon }}</v-icon>
+        </v-btn>
+      </div>
+      <v-spacer></v-spacer>
+        <div class="log__btn">
+          <v-btn class="white primary--text" rounded width="150" @click="login">
+          <span>login</span>
+        </v-btn>
+      </div>
+    </v-container>
   </v-app-bar>
 </template>
 
